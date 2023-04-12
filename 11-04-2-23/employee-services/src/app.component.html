@@ -1,0 +1,44 @@
+<body>
+    <h1 align="center">Emp Hub</h1>
+    <p>Company culture refers to the set of values, ethics, and beliefs that define the day-to-day operations and atmosphere at an organization. It impacts everything from high-level business decisions to the vibe in the communal kitchen. Culture at an organization originates from leadership, but all levels within a company—from hiring to setting employment policies to interacting within a physical space—play a role in defining it</p>
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CuVSe81dQ9sXYn77Uv7imYZz_LBAMAVxVQ&usqp=CAU">
+    </div>
+    <br>
+    <div>
+    <button class="button" (click)="displayEmployees()" >Display Employees</button>
+    </div>
+    <br>
+    <br>
+    <table id="customers">
+    <thead *ngIf="employees">
+        <tr>
+          <th> Employee ID</th>
+          <th> Name </th>
+          <th> Email </th>
+          <th> Gender </th>
+          <th> Phone Number </th>
+          <th> Department </th>
+          <th> Salary </th>
+        </tr>
+    </thead>
+    
+      <tbody *ngFor="let employee of employees">
+        <tr>
+          <td>{{ employee.id }} </td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.gender }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.department }}</td>
+          <td>{{ employee.salary }}</td>
+        </tr>
+          
+      </tbody>
+    </table>
+    <br><br>
+    </body>
+
+<router-outlet></router-outlet>
+
+<app-prod></app-prod>
